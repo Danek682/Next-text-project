@@ -12,9 +12,13 @@ export async function generateMetadata({ params }) {
   }
 }
 
+export const dynamic = "force-dynamic";
+
 export default async function Product({params}) {
  const { slug } = await params
-const req = await fetch(`${reqUrl}/products/?acf_format=standard&_fields=id,title,slug,acf&slug=${slug}`)
+const req = await fetch(`${reqUrl}/products/?acf_format=standard&_fields=id,title,slug,acf&slug=${slug}`,{
+  cache: "no-store"
+})
   const products = await req.json()
   const product = products[0]
   return (

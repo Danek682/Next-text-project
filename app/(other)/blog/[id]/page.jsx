@@ -10,10 +10,13 @@ export async function generateMetadata({ params }) {
   }
 } //МЕТАДАННЫЕ
 
+export const dynamic = "force-dynamic";
 
 export default async function Blogs ({params}) {
   const { id } = await params
-  const req = await fetch(`${reqUrl}/posts/${id}?&acf_format=standart&_fields=id,title,content,date`);
+  const req = await fetch(`${reqUrl}/posts/${id}?&acf_format=standart&_fields=id,title,content,date`,{
+    cache: "no-store"
+  });
   const posts = await req.json()
   console.log(posts)
   return (

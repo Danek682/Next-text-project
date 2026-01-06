@@ -4,8 +4,11 @@ export const metadata = {
 }
 import "./about.css"
 import { reqUrl } from "../../url"
+export const dynamic = "force-dynamic";
 export default async function About () {
-    const res = await fetch(`${reqUrl}/pages?&acf_format=standart&_fields=id,slug,title,content`)
+    const res = await fetch(`${reqUrl}/pages?&acf_format=standart&_fields=id,slug,title,content`, {
+        cache: "no-store"
+    })
     const products = await res.json();
     const about = products[1]
     console.log(about)

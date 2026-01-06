@@ -3,12 +3,15 @@ export const metadata = {
   description: 'Страницы нашего блога'
 }
 
+export const dynamic = "force-dynamic";
 
 import Link from "next/link"
 import './blog.css'
 import { reqUrl } from "../../url"
 export default async function Blog () {
-  const req = await fetch(`${reqUrl}/posts?&acf_format=standart&_fields=id,title,content,date`)
+  const req = await fetch(`${reqUrl}/posts?&acf_format=standart&_fields=id,title,content,date`, {
+    cache: "no-store"
+  })
   const posts = await req.json()
     return (
         <div className="blog">

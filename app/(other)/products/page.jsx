@@ -7,8 +7,12 @@ export const metadata = {
   description: 'Наши продукты'
 }
 
+export const dynamic = "force-dynamic";
+
 export default async function Products() {
-    const req = await fetch(`${reqUrl}/products/?acf_format=standard&_fields=id,slug,title,acf`);
+    const req = await fetch(`${reqUrl}/products/?acf_format=standard&_fields=id,slug,title,acf`, {
+      cache: "no-store"
+    });
     const products = await req.json(); 
     console.log(products);
 
