@@ -1,0 +1,150 @@
+
+.form-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;    
+}
+
+.form {
+    width: 500px;
+    background-color: #d6e1ee;
+    border-radius: 15px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-input__name,
+.form-input__email,
+.form-input__subject,
+.form-input__message,
+.form-input__phone {
+    display: flex;
+    flex-direction: column;
+    height: 52px;
+    margin: 30px 50px 4px;
+    gap: 5px;
+}
+
+.form-input__checkbox {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.form-input__checkbox-state {
+    padding-top: 4px;
+    display: flex;
+    justify-content: center;
+}
+
+.form-input__message {
+    height: auto;
+}
+
+.form-input__name-label,
+.form-input__email-label,
+.form-input__subject-label,
+.form-input__message-label {
+    color: #383636;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    text-align: left;
+}
+
+.form-input__name-input,
+.form-input__email-input,
+.form-input__subject-input {
+    height: 33px;
+    box-sizing: border-box;
+    border: 1px solid rgba(183, 183, 183, 1);
+    background: #fff;
+    padding: 8px 8.8px 9px;
+    border-radius: 5px  ;
+}
+
+
+.form-input__message-input {
+    box-sizing: border-box;
+    border: 1px solid rgba(183, 183, 183, 1);
+    background: #fff;
+    padding: 8px;
+    height: 80px;
+    color: #757575;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 100%;
+    text-align: left;
+    overflow: scroll;
+    resize: none;
+    overflow: auto;
+}
+
+.send__button-container {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.send__button {
+border-radius: 5px;
+cursor: pointer;
+border: none;
+box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.24),0px 0px 3px 0px rgba(0, 0, 0, 0.12);
+background: #6b7988;
+padding: 12px 12px 10px 12px;
+color: rgba(255, 255, 255, 1);
+  font-family: 'Roboto', sans-serif;
+font-size: 14px;
+font-weight: 500;
+line-height: 16px;
+text-align: center;
+text-transform: uppercase;
+opacity: 0.5;
+}
+
+.captcha {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.send__buttonTrue {
+border-radius: 5px;
+cursor: pointer;
+border: none;
+box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.24),0px 0px 3px 0px rgba(0, 0, 0, 0.12);
+background: #667b92;
+padding: 12px 12px 10px 12px;
+color: rgba(255, 255, 255, 1);
+  font-family: 'Roboto', sans-serif;
+font-size: 14px;
+font-weight: 500;
+line-height: 16px;
+text-align: center;
+text-transform: uppercase;
+}
+
+.error {
+    font-size: 12px;
+    color: rgb(240, 55, 55);
+}
+
+.success-message {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid green;
+    width: 80%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.none {
+    display: none;
+}
