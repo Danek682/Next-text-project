@@ -1,3 +1,4 @@
+import Script from 'next/script';
 import './globals.css'
 import { Roboto } from "next/font/google";
 
@@ -16,6 +17,11 @@ export default function RootLayout({ children }) {
     <html lang="ru">
       <body className={roboto.className}>
         {children}
+        <Script
+        src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+        async
+        defer
+      />
       </body>
     </html>
   )

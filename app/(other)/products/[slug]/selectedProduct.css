@@ -40,3 +40,10 @@ font-weight: 400;
 line-height: 25px;
 text-align: left;
 }
+
+.test {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

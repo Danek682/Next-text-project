@@ -1,1 +1,2 @@
-export const reqUrl = 'https://cy377121-wordpress-rp308.tw1.ru/wp-json/wp/v2'
+export const reqUrl = 'http://products-test.local/wp-json/wp/v2'
+
